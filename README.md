@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧪 Live Coding Challenge – Web Developer
 
-## Getting Started
+Welcome to the live coding challenge!
 
-First, run the development server:
+This exercise is designed to evaluate your understanding of React, TypeScript, client-side behavior and server-side integration with Next.js. Feel free to structure the code as you see fit — we value clarity, modularity, and good decision-making.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Challenge: Inactivity Timer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ Goal
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Implement a timer that tracks **user activity** on the page.
 
-## Learn More
+### 🔹 Requirements
 
-To learn more about Next.js, take a look at the following resources:
+- The timer should start counting when the user opens the page.
+- It should reset whenever the user interacts with the page:
+  - Click
+  - Scroll
+  - Keyboard input
+- Every **10 seconds of inactivity**, log the total elapsed time in the console.
+- The counter should **pause when the user leaves the tab** or browser window (e.g. tab goes to background or window loses focus).
+- The timer should resume when the user returns to the page.
+- The log format must be: `mm:ss`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 💡 Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- The UI does **not** need to be styled.
+- Focus on: clear logic, correct behavior, and clean code.
+- You may use any folder structure and tools (hooks, utils, etc.).
+- You are free to use browser APIs and helper libraries if needed.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚡ Bonus Challenge
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you complete the main task and there’s still time left, add the following:
+
+### 📝 Server Logging
+
+Every time the user hits 10 seconds of inactivity and logs to the console, also:
+
+- Use a _server function_ to log a payload with the following data:
+  - `elapsedTime` (in seconds or `mm:ss`)
+  - `timestamp`
+  - Any metadata you find useful (e.g., page URL, user agent)
+
+Good luck!
